@@ -1,0 +1,15 @@
+export default function Tasks({ tasks, onDelete }) {
+  return (
+    <div className="grid grid-cols-[repeat(4,auto)] gap-8">
+      {tasks?.map((task) => (
+        <div className="task_cont grid border-2 p-2" key={task.id}>
+          Задача: {task.text} <br />
+          Активность: {task.status === "true" ? "Активна" : "Неактивна"} <br />
+          <p>Категория: {task.category}</p> 
+          Дата: {task.date}
+          <button className="border-2 pl-2 pr-2 cursor-pointer" onClick={()=>onDelete(task.id)} >Удалить задачу</button>
+        </div>
+      ))}
+    </div>
+  );
+}

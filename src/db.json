@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "text": "Поспать",
+      "status": "false",
+      "category": "Личное",
+      "date": "2026-10-09",
+      "id": "VRcuVOlUN5k"
+    },
+    {
+      "text": "Новый год :)",
+      "status": "true",
+      "category": "Личное",
+      "date": "2027-01-01",
+      "id": "dm-m-smDyLA"
+    },
+    {
+      "text": "Доделать проект",
+      "status": "true",
+      "category": "Работа",
+      "date": "2026-12-14",
+      "id": "DHfYBslRf5g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
