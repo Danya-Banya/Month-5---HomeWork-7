@@ -1,14 +1,7 @@
 {
   "tasks": [
     {
-      "text": "Поспать",
-      "status": "false",
-      "category": "Личное",
-      "date": "2026-10-09",
-      "id": "VRcuVOlUN5k"
-    },
-    {
-      "text": "Новый год :)",
+      "text": "Новый год ",
       "status": "true",
       "category": "Личное",
       "date": "2027-01-01",
@@ -20,6 +13,20 @@
       "category": "Работа",
       "date": "2026-12-14",
       "id": "DHfYBslRf5g"
+    },
+    {
+      "text": "Сходить к врачу",
+      "status": "true",
+      "category": "Личное",
+      "date": "2026-10-13",
+      "id": "OCx8jotCkbo"
+    },
+    {
+      "text": "War Thunder",
+      "status": "true",
+      "category": "Личное",
+      "date": "2026-10-12",
+      "id": "49J0lyUAr9E"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

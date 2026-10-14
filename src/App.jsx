@@ -1,38 +1,25 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Contacts from "./Components/Contacts";
+import Detail from "./pages/Detail";
+import NotFound from "./Components/NotFound";
 import "./App.css";
-import axios from "axios";
-import { useEffect } from "react";
-import CreateTask from "./Components/CreateTask";
-import Tasks from "./Components/Tasks";
 
-function App() {
-  const [task, setTask] = useState([]);
-  const getTasks = () => {
-    axios
-      .get("http://localhost:8000/tasks")
-      .then((response) => setTask(response.data))
-      .catch((err) => console.log(err));
-  };
-  const deleteTask = (id) => {
-    axios
-      .delete(`http://localhost:8000/tasks/${id}`)
-      .then(() => {
-        getTasks();
-      })
-      .catch((e) => console.log(e));
-  };
-  useEffect(() => {
-    getTasks();
-  }, []);
+export default function App() {
   return (
-    <>
-      <div className="tasks p-2 bg-[#222] text-white font-mono">
-        <CreateTask getTasks={getTasks} />
-        <h1 className="text-[24px] mb-2 ">Задачи</h1>
-        <Tasks tasks={task} onDelete={deleteTask} />
-      </div>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
-
-export default App;
